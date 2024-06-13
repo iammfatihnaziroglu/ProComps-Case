@@ -29,9 +29,9 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-t-gray-800 ">
-      <div className="max-w-1xl ms-10 sm:px-0 lg:px-0 xl:px-0">
-        <div className="relative flex h-16 items-center justify-between">
+    <nav className="fixed top-0 z-50 w-full border-b border-gray-600 border-opacity-40 bg-black ">
+      <div className="max-w-1xl ms-6 sm:px-0 lg:px-0 xl:px-0">
+        <div className="relative mb-1 mt-2 flex h-10 items-center justify-between">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img
