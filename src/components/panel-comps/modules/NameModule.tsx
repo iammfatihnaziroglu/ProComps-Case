@@ -4,7 +4,7 @@ import ArrowDown from "../../../utilities/images/png/arrow_down.png";
 
 const NameModule: React.FC = () => {
   return (
-    <div className="flex h-32 w-[101px] flex-col rounded-lg border border-red-900">
+    <div className="flex h-32 w-[101px] flex-col rounded-lg border border-card_default-500">
       <div className="ml-4 h-4 w-[61px] pt-4 transition duration-300 ease-in-out">
         <div className="h-4 w-[51px] gap-2">
           <p className="h-4 w-[33px] font-source-sans-pro font-normal leading-4 text-gray-400">
