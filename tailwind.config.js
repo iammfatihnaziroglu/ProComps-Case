@@ -28,6 +28,7 @@ module.exports = {
         },
         procomps: "#06D6BE",
         scroll: "#292929",
+        builder: "#5E5E5E",
       },
     },
   },

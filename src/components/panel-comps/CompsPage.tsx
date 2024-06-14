@@ -1,10 +1,10 @@
 import React from "react";
-import NameModule from "./modules/NameModule";
+import CompBuilder from "./modules/CompBuilder";
 
 const CompsPage: React.FC = () => {
   return (
     <div>
-      <NameModule />
+      <CompBuilder />
     </div>
     // <div className="bg-card_default-500 max-w-screen left-5 top-5 flex h-[632px] max-h-screen w-[1056px]">
     //   <div></div>
