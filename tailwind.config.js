@@ -26,6 +26,7 @@ module.exports = {
         card_default: {
           500: "#1C1C1C",
         },
+        procomps: "#06D6BE",
         scroll: "#292929",
       },
     },
