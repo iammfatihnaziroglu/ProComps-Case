@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import AkaliAvatar from "../../../utilities/champions/Akali.png";
 import BriarAvatar from "../../../utilities/champions/Briar.png";
 import AhriAvatar from "../../../utilities/champions/Ahri.png";
@@ -8,12 +8,27 @@ import EngageIcon from "../../../utilities/icons/png/engage.png";
 import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
 
 const ListComponent: React.FC = () => {
+  const [isDeleteHovered, setIsDeleteHovered] = useState(false);
+
   return (
     <div className="bg-compName-gray md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] hover:bg-delete-gray">
-      <div id="delete" className="relative mb-20 hidden group-hover:block">
-        <div className="absolute left-[962px] top-[28px]  ">
-          <div className="flex h-6 w-6 items-center justify-center rounded-full border border-delete-border bg-delete-gray">
-            <div className="h-[1.13px] w-[9px] rounded-lg bg-scaling-gray"></div>
+      <div
+        id="delete"
+        className="relative mb-20 hidden group-hover:block"
+        onMouseEnter={() => setIsDeleteHovered(true)}
+        onMouseLeave={() => setIsDeleteHovered(false)}
+      >
+        <div className="absolute left-[962px] top-[28px]">
+          <div
+            className={`flex h-6 w-6 items-center justify-center rounded-full border border-delete-border ${
+              isDeleteHovered ? "bg-delete-red" : "bg-delete-gray"
+            }`}
+          >
+            <div
+              className={`h-[1.13px] w-[9px] rounded-lg bg-scaling-gray ${
+                isDeleteHovered ? "bg-white" : ""
+              }`}
+            ></div>
           </div>
         </div>
       </div>

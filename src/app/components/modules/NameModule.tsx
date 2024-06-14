@@ -1,6 +1,6 @@
 import React from "react";
-import ArrowUp from "../../../utilities/images/png/arrow_up.png";
-import ArrowDown from "../../../utilities/images/png/arrow_down.png";
+import ArrowUp from "../../../utilities/icons/png/arrow_up.png";
+import ArrowDown from "../../../utilities/icons/png/arrow_down.png";
 
 const NameModule: React.FC = () => {
   return (
