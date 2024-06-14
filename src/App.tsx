@@ -3,7 +3,7 @@ import Homepage from "./app/home/Homepage";
 
 function App() {
   return (
-    <main className="min-w-screen min-h-screen bg-black">
+    <main className="max-w-1xl max-h-1xl fixed h-full w-full bg-black">
       <Navbar />
       <div className="items-center justify-center">
         <Homepage />
