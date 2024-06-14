@@ -1,6 +1,4 @@
 import React from "react";
-import BuilderIcon from "../../../utilities/images/png/builder-icon.png";
-import BuilderWhiteIcon from "../../../utilities/images/png/builder-icon_white.png";
 
 const DeleteComp: React.FC = () => {
   return (
