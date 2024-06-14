@@ -9,7 +9,15 @@ import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
 
 const ListComponent: React.FC = () => {
   return (
-    <div className="bg-compName-gray md:min-w-screen flex h-20 w-[976px] items-center rounded-[200px]">
+    <div className="bg-compName-gray md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] hover:bg-delete-gray">
+      <div id="delete" className="relative mb-20 hidden group-hover:block">
+        <div className="absolute left-[962px] top-[28px]  ">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full border border-delete-border bg-delete-gray">
+            <div className="h-[1.13px] w-[9px] rounded-lg bg-scaling-gray"></div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex h-20 w-[976px] items-center justify-center rounded-[200px] border border-delete-border">
         <div className="flex h-10 w-[896px] flex-row items-center justify-start">
           <div className="flex h-10 w-[816px] flex-row items-center justify-start gap-6">
