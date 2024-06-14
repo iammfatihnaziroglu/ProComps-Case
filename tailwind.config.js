@@ -18,6 +18,11 @@ module.exports = {
           100: "#E7F6E2",
           300: "#32592D",
         },
+        scaling: {
+          green: "#19AB4F",
+          orange: "#CE6C21",
+          red: "#C24B4B",
+        },
         card_default: {
           500: "#1C1C1C",
         },

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SectionLabel from "./utilities/SectionLabel";
 
 function Homepage() {
