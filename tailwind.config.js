@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "source-sans-pro": ["Source Sans Pro", "sans-serif"],
+        unbounded: ["Unbounded", "sans-serif"],
       },
       colors: {
         neutrals: {
@@ -28,7 +29,6 @@ module.exports = {
         delete: {
           gray: "#292929",
           red: "#FF0000",
-
           border: "#2D2D2D",
         },
         card_default: {
@@ -37,6 +37,10 @@ module.exports = {
         procomps: "#06D6BE",
         scroll: "#292929",
         builder: "#5E5E5E",
+        compName: {
+          gray: "#1C1C1C",
+          white: "#DADEE3 ",
+        },
       },
     },
   },

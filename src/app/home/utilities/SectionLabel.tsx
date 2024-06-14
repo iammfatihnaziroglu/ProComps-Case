@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CheckIcon from "../../../utilities/images/png/check-icon.png";
+import CheckIcon from "../../../utilities/icons/png/check-icon.png";
 import CompsPage from "../../components/CompsPage";
 
 const SectionLabel: React.FC = () => {
