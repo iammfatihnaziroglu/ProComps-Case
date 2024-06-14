@@ -6,9 +6,11 @@ import AsheAvatar from "../../../utilities/champions/Ashe.png";
 import BrandAvatar from "../../../utilities/champions/Brand.png";
 import EngageIcon from "../../../utilities/icons/png/engage.png";
 import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
+import BuilderWhiteIcon from "../../../utilities/icons/png/builder-icon_white.png";
 
 const ListComponent: React.FC = () => {
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
+  const [isBuilderHovered, setIsBuilderHovered] = useState(false);
 
   return (
     <div className="bg-compName-gray md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] hover:bg-delete-gray">
@@ -20,11 +22,13 @@ const ListComponent: React.FC = () => {
       >
         <div className="absolute left-[962px] top-[28px]">
           <div
+            id="red"
             className={`flex h-6 w-6 items-center justify-center rounded-full border border-delete-border ${
               isDeleteHovered ? "bg-delete-red" : "bg-delete-gray"
             }`}
           >
             <div
+              id="white"
               className={`h-[1.13px] w-[9px] rounded-lg bg-scaling-gray ${
                 isDeleteHovered ? "bg-white" : ""
               }`}
@@ -95,10 +99,17 @@ const ListComponent: React.FC = () => {
                   </p>
                 </div>
                 <div className="flex h-10 w-10 items-center gap-4 ">
-                  <div className="flex items-center justify-center">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-builder">
+                  <div
+                    className="flex items-center justify-center"
+                    onMouseEnter={() => setIsBuilderHovered(true)}
+                    onMouseLeave={() => setIsBuilderHovered(false)}
+                  >
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-full border border-builder ${isBuilderHovered ? "border-procomps bg-procomps" : ""}`}
+                    >
+                      {/* className={`w-[9px] bg-scaling-gray ${ isDeleteHovered ? "bg-white" : ""}`} */}
                       <img
-                        src={BuilderIcon}
+                        src={isBuilderHovered ? BuilderWhiteIcon : BuilderIcon}
                         alt="Builder Icon"
                         className="h-[15.46px] w-[16.5px]"
                       />
