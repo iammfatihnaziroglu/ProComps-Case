@@ -1,26 +1,13 @@
 import React from "react";
-import CheckIcon from "../../utilities/images/png/check-icon.png";
 
 const CompsPage: React.FC = () => {
   return (
-    <div className="shadow-opacity-6 w-full gap-[32px] rounded-lg border border-neutrals-300 bg-red-800 p-[32px] shadow md:h-[auto] md:w-[560px]">
-      <div className="h-[142px] w-full gap-[12px] pb-3 md:h-[auto] md:w-[464px]">
-        <button className="p-[4px, 12px, 4px, 8px] border-neutrals-400 flex h-[28px] w-[85px] items-center justify-center gap-2 rounded-full border border-opacity-10 bg-lime-100">
-          <div className="flex h-[14px] w-[65px] items-center gap-2">
-            <img src={CheckIcon} alt="Ready Icon" className="h-4 w-4" />
-            <span className="pt-[2px] font-mono text-[14px] font-semibold text-lime-300">
-              READY
-            </span>
-          </div>
-        </button>
-        <p className=" text-neutrals-400 mt-4 font-mono text-[24px] font-semibold leading-[32px] tracking-[-0.03em] md:text-[40px]">
-          Comps Panel Design
-        </p>
-        <p className="mt-4 font-mono text-sm text-neutrals-300">
-          This is how the interface should look like as default when page shows
-          and/or when the Team Insights tab is actived.
-        </p>
-        <div className="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0 rtl:space-x-reverse"></div>
+    <div className="bg-card_default-500 relative left-5 top-5 flex h-[632px] w-[1056px]">
+      <div></div>
+      <div className="ml-8 mt-12 flex h-[552px] w-[1008px] items-center justify-center">
+        <div className="relative h-full w-full overflow-hidden">
+          <div className="absolute right-0 top-1 flex h-[250px] w-[4px] overflow-y-auto rounded-full bg-scroll"></div>
+        </div>
       </div>
     </div>
   );

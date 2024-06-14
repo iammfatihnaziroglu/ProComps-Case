@@ -21,7 +21,7 @@ const SectionLabel: React.FC = () => {
               onClick={handleClick} // Buttona onClick özelliği ekleyerek handleClick fonksiyonunu çağır
             >
               <div className="flex h-[14px] w-[65px] items-center gap-2">
-                <img src={CheckIcon} alt="Ready Icon" className="h-4 w-4" />
+                <img src={CheckIcon} alt="Check Icon" className="h-4 w-4" />
                 <span className="pt-[2px] font-mono text-[14px] font-semibold text-lime-300">
                   READY
                 </span>
