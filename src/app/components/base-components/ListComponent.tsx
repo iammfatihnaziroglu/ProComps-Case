@@ -55,10 +55,10 @@ const ListComponent: React.FC = () => {
                   />
                 </div>
               </div>
-              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6 ">
+              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6  ">
                 <div
                   id="engageId"
-                  className="w-8xl flex h-10 items-center gap-2"
+                  className="flex h-10 w-24 items-center gap-2"
                 >
                   <img
                     src={EngageIcon}
@@ -69,7 +69,7 @@ const ListComponent: React.FC = () => {
                     Engage
                   </p>
                 </div>
-                <div className="flex h-[40px] w-[200px] flex-row items-center justify-start gap-10">
+                <div className="ml-6 flex h-[40px] w-[200px] flex-row items-center justify-end gap-10">
                   <div className="flex h-10 w-16 flex-row items-center gap-2">
                     <div className="h-1 w-4 rounded-lg bg-scaling-green"></div>
                     <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
