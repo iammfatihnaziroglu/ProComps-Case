@@ -5,8 +5,9 @@ import AhriAvatar from "../../../utilities/champions/Ahri.png";
 import AsheAvatar from "../../../utilities/champions/Ashe.png";
 import BrandAvatar from "../../../utilities/champions/Brand.png";
 import EngageIcon from "../../../utilities/icons/png/engage.png";
+import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
 
-const ListComponent1: React.FC = () => {
+const ListComponent: React.FC = () => {
   return (
     <div className="bg-compName-gray md:min-w-screen flex h-20 w-[976px] items-center rounded-[200px]">
       <div className="flex h-20 w-[976px] items-center justify-center rounded-[200px] border border-delete-border">
@@ -17,7 +18,7 @@ const ListComponent1: React.FC = () => {
             </p>
             <div className="w-10 rotate-90 border border-delete-border"></div>
             <div className="flex h-10 w-[568px] flex-row gap-10 ">
-              <div className="flex h-10 w-48 justify-center bg-red-900">
+              <div className="flex h-10 w-48 justify-center ">
                 <div className="flex h-auto w-auto items-center ">
                   <img
                     src={AkaliAvatar}
@@ -46,16 +47,40 @@ const ListComponent1: React.FC = () => {
                   />
                 </div>
               </div>
-              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6 bg-blue-800">
-                <div id="engageId" className="w-8xl ml-5 flex h-10 gap-2 pt-10">
+              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6 ">
+                <div
+                  id="engageId"
+                  className="w-8xl flex h-10 items-center gap-2"
+                >
                   <img
                     src={EngageIcon}
                     alt="Engage Icon"
-                    className="mt-[-2.36px] h-6 w-6"
+                    className=" h-6 w-6"
                   />
-                  <p className="h-8 w-16 font-source-sans-pro font-normal leading-5 text-gray-400 ">
+                  <p className="mt-3 h-8 w-16 font-source-sans-pro font-normal leading-5 text-gray-400 ">
                     Engage
                   </p>
+                </div>
+                <div className="flex h-[40px] w-[200px] flex-row items-center justify-start gap-10">
+                  <div className="flex h-10 w-16 flex-row items-center gap-2">
+                    <div className="h-1 w-4 rounded-lg bg-scaling-green"></div>
+                    <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
+                    <div className="h-1 w-4 rounded-lg bg-scaling-red"></div>
+                  </div>
+                  <p className="flex h-10 w-24 items-center font-source-sans-pro text-[16px] font-normal leading-5 text-gray-400">
+                    8 hours ago
+                  </p>
+                </div>
+                <div className="flex h-10 w-10 items-center gap-4 ">
+                  <div className="flex items-center justify-center">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-builder">
+                      <img
+                        src={BuilderIcon}
+                        alt="Builder Icon"
+                        className="h-[15.46px] w-[16.5px]"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,4 +91,4 @@ const ListComponent1: React.FC = () => {
   );
 };
 
-export default ListComponent1;
+export default ListComponent;
