@@ -22,6 +22,14 @@ module.exports = {
           green: "#19AB4F",
           orange: "#CE6C21",
           red: "#C24B4B",
+          gray: "#5D5D5D",
+          white: "#D9D9D9",
+        },
+        delete: {
+          gray: "#292929",
+          red: "#FF0000",
+
+          border: "#2D2D2D",
         },
         card_default: {
           500: "#1C1C1C",
