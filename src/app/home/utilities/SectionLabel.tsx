@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CheckIcon from "../../../utilities/images/png/check-icon.png";
-import CompsPage from "../../panel-comps/CompsPage";
+import CompsPage from "../../components/CompsPage";
 
 const SectionLabel: React.FC = () => {
   const [showCompsPage, setShowCompsPage] = useState(false);
@@ -17,7 +17,7 @@ const SectionLabel: React.FC = () => {
         <div className="shadow-opacity-6 w-full gap-[32px] rounded-lg border border-neutrals-300 bg-neutrals-50 p-[32px] shadow md:h-[auto] md:w-[560px]">
           <div className="h-[142px] w-full gap-[12px] pb-3 md:h-[auto] md:w-[464px]">
             <button
-              className="p-[4px, 12px, 4px, 8px] border-neutrals-400 flex h-[28px] w-[85px] items-center justify-center gap-2 rounded-full border border-opacity-10 bg-lime-100 hover:bg-lime-200 active:hover:bg-lime-200"
+              className="p-[4px, 12px, 4px, 8px] flex h-[28px] w-[85px] items-center justify-center gap-2 rounded-full border border-neutrals-400 border-opacity-10 bg-lime-100 hover:bg-lime-200 active:hover:bg-lime-200"
               onClick={handleClick} // Buttona onClick özelliği ekleyerek handleClick fonksiyonunu çağır
             >
               <div className="flex h-[14px] w-[65px] items-center gap-2">
@@ -27,7 +27,7 @@ const SectionLabel: React.FC = () => {
                 </span>
               </div>
             </button>
-            <p className=" text-neutrals-400 mt-4 font-mono text-[24px] font-semibold leading-[32px] tracking-[-0.03em] md:text-[40px]">
+            <p className=" mt-4 font-mono text-[24px] font-semibold leading-[32px] tracking-[-0.03em] text-neutrals-400 md:text-[40px]">
               Comps Panel Design
             </p>
             <p className="mt-4 font-mono text-sm text-neutrals-300">
