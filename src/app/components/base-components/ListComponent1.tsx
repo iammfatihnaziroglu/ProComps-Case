@@ -4,7 +4,7 @@ import BriarAvatar from "../../../utilities/champions/Briar.png";
 import AhriAvatar from "../../../utilities/champions/Ahri.png";
 import AsheAvatar from "../../../utilities/champions/Ashe.png";
 import BrandAvatar from "../../../utilities/champions/Brand.png";
-import GameStyle from "../modules/GameStyle";
+import EngageIcon from "../../../utilities/icons/png/engage.png";
 
 const ListComponent1: React.FC = () => {
   return (
@@ -46,7 +46,18 @@ const ListComponent1: React.FC = () => {
                   />
                 </div>
               </div>
-              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6 bg-blue-800"></div>
+              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6 bg-blue-800">
+                <div id="engageId" className="w-8xl ml-5 flex h-10 gap-2 pt-10">
+                  <img
+                    src={EngageIcon}
+                    alt="Engage Icon"
+                    className="mt-[-2.36px] h-6 w-6"
+                  />
+                  <p className="h-8 w-16 font-source-sans-pro font-normal leading-5 text-gray-400 ">
+                    Engage
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
