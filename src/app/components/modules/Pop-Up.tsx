@@ -1,69 +1,75 @@
 import React from "react";
+import PopUpExit from "../../../utilities/icons/png/popup_exit.png";
+import AkaliAvatar from "../../../utilities/champions/Akali.png";
+import BriarAvatar from "../../../utilities/champions/Briar.png";
+import AhriAvatar from "../../../utilities/champions/Ahri.png";
+import AsheAvatar from "../../../utilities/champions/Ashe.png";
+import BrandAvatar from "../../../utilities/champions/Brand.png";
 
 interface PopUpProps {
   name: string;
-  gamestyle: string;
+  gamestyle: {
+    name: string;
+    icon: string;
+  };
   onClose: () => void;
 }
 
 const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
   return (
-    <div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center">
-      <div
-        className="absolute h-full w-full bg-gray-900 opacity-50"
-        onClick={onClose}
-      ></div>
-      <div className="z-10 rounded-lg bg-white p-4 shadow-lg">
-        <div className="mb-4">
-          <h2 className="text-xl font-semibold">{name}</h2>
-          <p className="text-sm text-gray-600">{gamestyle}</p>
-        </div>
-        <button
-          className="rounded bg-gray-300 px-4 py-2 font-semibold text-gray-800 hover:bg-gray-400"
+    <div className="ml-[295px] mt-[65px] flex h-[262px] w-[400px] items-center justify-center">
+      <div className="relative h-full w-full rounded-[16px] bg-black">
+        <div
           onClick={onClose}
+          className=" ml-[376px] mt-2 flex h-4 w-4 items-start justify-end"
         >
-          Close
-        </button>
+          <img
+            src={PopUpExit}
+            alt="Pop Up Exit"
+            className=" h-[10px] w-[10px]"
+          />
+        </div>
+        <p className="ml-[100px] mt-6 flex h-10 w-[200px] flex-nowrap justify-center font-unbounded text-[16px] font-normal leading-5 text-compName-white">
+          {name}
+        </p>
+        <p className="-mt-4 ml-[100px] flex h-10 w-[200px] flex-nowrap justify-center text-center font-source-sans-pro text-[16px] font-normal leading-5 text-compName-white">
+          8 hours ago
+        </p>
+        <div className="ml-9 flex h-10 w-48 justify-center ">
+          <div className="ml-8 flex h-auto w-auto items-center ">
+            <img
+              src={AkaliAvatar}
+              alt="Akali Avatar"
+              className="h-14 w-14 rounded-[75px] border-[2.4px] border-black"
+            />
+            <img
+              src={BriarAvatar}
+              alt="Briar Avatar"
+              className="-ml-[5px] h-14 w-14 rounded-[75px] border-[2.4px] border-black"
+            />
+            <img
+              src={AhriAvatar}
+              alt="Ahri Avatar"
+              className="-ml-[5px] h-14 w-14 rounded-[48.12px] border-[3px] border-black"
+            />
+            <img
+              src={AsheAvatar}
+              alt="Ashe Avatar"
+              className="-ml-[5px] h-14 w-14 rounded-[75px] border-[2.4px] border-black"
+            />
+            <img
+              src={BrandAvatar}
+              alt="Brand Avatar"
+              className="-ml-[5px] h-14 w-14 rounded-[68.5px] border-[2.4px] border-black"
+            />
+          </div>
+        </div>
+        <div className="ml-[108px] mt-8 flex h-10 w-[184px] flex-row items-center justify-center gap-6 ">
+          <div className="bg-red text-white">{gamestyle.icon}</div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default PopUp;
-
-// const [showPopup, setShowPopup] = useState(false);
-
-// const handleComponentClick = (name: string, gamestyle: string) => {
-//   setSelectedName(name);
-//   setSelectedGamestyle(gamestyle);
-//   setShowPopup(true);
-// };
-
-// const handleClosePopup = () => {
-//   setShowPopup(false);
-// };
-
-// return sonrası aşağısı
-
-// {components.map((comp) => (
-//   <div
-//     key={comp.id}
-//     className="w-1/2 cursor-pointer p-2"
-//     onClick={() =>
-//       handleComponentClick(comp.name, comp.gamestyle)
-//     }
-//   >
-//     <div className="rounded-lg bg-white p-4 shadow">
-//       <h2 className="text-lg font-semibold">{comp.name}</h2>
-//       <p className="text-sm text-gray-600">{comp.gamestyle}</p>
-//     </div>
-//   </div>
-// ))}
-
-// {showPopup && (
-//   <PopUp
-//     name={selectedName}
-//     gamestyle={selectedGamestyle}
-//     onClose={handleClosePopup}
-//   />
-// )}

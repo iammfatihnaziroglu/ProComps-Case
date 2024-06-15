@@ -8,39 +8,12 @@ import PickIcon from "../../../../utilities/icons/png/pick.png";
 import BuilderIcon from "../../../../utilities/icons/png/builder-icon.png";
 import BuilderWhiteIcon from "../../../../utilities/icons/png/builder-icon_white.png";
 
-interface ListComponentProps {
-  onDelete: () => void;
-}
-
-const ListComponent4: React.FC<ListComponentProps> = ({ onDelete }) => {
+const ListComponent4: React.FC = () => {
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
   const [isBuilderHovered, setIsBuilderHovered] = useState(false);
 
   return (
-    <div className="md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] bg-compName-gray hover:bg-delete-gray">
-      <div
-        onClick={onDelete}
-        className="relative mb-20 hidden group-hover:block"
-        onMouseEnter={() => setIsDeleteHovered(true)}
-        onMouseLeave={() => setIsDeleteHovered(false)}
-      >
-        <div className="absolute left-[962px] top-[28px]">
-          <div
-            id="red"
-            className={`flex h-6 w-6 items-center justify-center rounded-full border border-delete-border ${
-              isDeleteHovered ? "bg-delete-red" : "bg-delete-gray"
-            }`}
-          >
-            <div
-              id="white"
-              className={`h-[1.13px] w-[9px] rounded-lg bg-scaling-gray ${
-                isDeleteHovered ? "bg-white" : ""
-              }`}
-            ></div>
-          </div>
-        </div>
-      </div>
-
+    <div className="md:min-w-screen  flex h-20 w-[976px] items-center rounded-[200px] bg-compName-gray hover:bg-delete-gray">
       <div className="flex h-20 w-[976px] items-center justify-center rounded-[200px] border border-delete-border">
         <div className="flex h-10 w-[896px] flex-row items-center justify-start">
           <div className="flex h-10 w-[848px] flex-row items-center justify-start gap-6">

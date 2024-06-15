@@ -21,7 +21,7 @@ const AddedStyle: React.FC = () => {
 
   return (
     <div
-      className="flex h-32 w-[101px] cursor-pointer flex-col items-center justify-center rounded-lg"
+      className="mt-[56px] flex h-4 w-[101px] cursor-pointer flex-col items-center justify-center rounded-lg"
       onClick={handleClick}
     >
       <div className="-ml-10  flex h-4 w-[61px] items-center transition duration-300 ease-in-out">

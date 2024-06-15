@@ -7,7 +7,7 @@ function App() {
       <div className="fixed">
         <Navbar />
       </div>
-      <div className="flex items-center justify-center overflow-y-auto">
+      <div className="min-w-screen flex min-h-screen items-center justify-center overflow-y-auto">
         <Homepage />
       </div>
     </main>
