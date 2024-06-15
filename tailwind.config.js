@@ -44,5 +44,9 @@ module.exports = {
       },
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    [require("tailwind-scrollbar")],
+    [flowbite.plugin()],
+  ],
 };

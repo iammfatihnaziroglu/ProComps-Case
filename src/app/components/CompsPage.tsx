@@ -1,9 +1,14 @@
 import React from "react";
-import ListComponent1 from "./base-components/ListComponent1";
+import ListComponent1 from "./base-components/ListComponents/ListComponent1";
+import ListComponent2 from "./base-components/ListComponents/ListComponent2";
+import ListComponent3 from "./base-components/ListComponents/ListComponent3";
+import ListComponent4 from "./base-components/ListComponents/LİstComponent4";
+import ListComponent5 from "./base-components/ListComponents/ListComponent5";
+import ListComponent6 from "./base-components/ListComponents/ListComponent6";
 
 const CompsPage: React.FC = () => {
   return (
-    <div className="md:min-w-screen flex h-[670px] w-[1096px] items-center ">
+    <div className="md:min-w-screen flex h-[670px] w-[1096px] items-center justify-center ">
       <div className="flex h-[632px] w-[1056px]">
         <div className="flex h-[632px] w-[1056px] rounded-[24px] bg-compName-gray">
           <div className="fixed ml-[72px] mt-4 h-4 w-[61px] transition duration-300 ease-in-out">
@@ -42,21 +47,25 @@ const CompsPage: React.FC = () => {
             </div>
           </div>
           <div className="ml-8 mt-12 flex h-[552px] max-h-[552px] w-[1008px] flex-col items-start">
-            <div className="flex h-[552px] w-[1008px] flex-col gap-8 overflow-hidden ">
-              <div className="fixed ml-[1004px] mt-1 h-[250px] w-1 overflow-y-auto rounded-[200px] bg-delete-gray"></div>
-              <div className="flex h-[944px] w-[976px] flex-col gap-4">
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
-                <ListComponent1 />
+            <div className="flex h-[552px] w-[1008px] flex-col gap-8 ">
+              <div className="flex h-full overflow-y-auto">
+                {/* <div
+                className="fixed ml-[1004px] mt-1 flex h-[250px] w-1 overflow-y-auto rounded-[200px] bg-delete-gray"
+              ></div> */}
+                <div className="flex h-[944px] w-[976px] flex-col gap-4">
+                  <ListComponent1 />
+                  <ListComponent2 />
+                  <ListComponent3 />
+                  <ListComponent4 />
+                  <ListComponent5 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                  <ListComponent6 />
+                </div>
               </div>
             </div>
           </div>

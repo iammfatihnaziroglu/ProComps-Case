@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import AkaliAvatar from "../../../utilities/champions/Akali.png";
-import BriarAvatar from "../../../utilities/champions/Briar.png";
-import AhriAvatar from "../../../utilities/champions/Ahri.png";
-import AsheAvatar from "../../../utilities/champions/Ashe.png";
-import BrandAvatar from "../../../utilities/champions/Brand.png";
-import EngageIcon from "../../../utilities/icons/png/engage.png";
-import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
-import BuilderWhiteIcon from "../../../utilities/icons/png/builder-icon_white.png";
+import AkaliAvatar from "../../../../utilities/champions/Akali.png";
+import BriarAvatar from "../../../../utilities/champions/Briar.png";
+import AhriAvatar from "../../../../utilities/champions/Ahri.png";
+import AsheAvatar from "../../../../utilities/champions/Ashe.png";
+import BrandAvatar from "../../../../utilities/champions/Brand.png";
+import SplitIcon from "../../../../utilities/icons/png/split.png";
+import BuilderIcon from "../../../../utilities/icons/png/builder-icon.png";
+import BuilderWhiteIcon from "../../../../utilities/icons/png/builder-icon_white.png";
 
-const ListComponent1: React.FC = () => {
+const ListComponent5: React.FC = () => {
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
   const [isBuilderHovered, setIsBuilderHovered] = useState(false);
 
@@ -39,11 +39,11 @@ const ListComponent1: React.FC = () => {
 
       <div className="flex h-20 w-[976px] items-center justify-center rounded-[200px] border border-delete-border">
         <div className="flex h-10 w-[896px] flex-row items-center justify-start">
-          <div className="flex h-10 w-[816px] flex-row items-center justify-start gap-6">
-            <p className="flex h-10 w-[200px] flex-wrap items-center text-nowrap  font-unbounded text-[13px] font-normal leading-4 text-compName-white">
-              Protetct Ashe (Late)
+          <div className="flex h-10 w-[848px] flex-row items-center justify-start gap-6">
+            <p className="flex h-10 w-[200px] flex-wrap items-center text-wrap break-words font-unbounded text-[13px] font-normal leading-4 text-compName-white">
+              CompName Example 2
             </p>
-            <div className="flex w-10 rotate-90 border border-delete-border"></div>
+            <div className="-ml-3 flex w-10 rotate-90 border border-delete-border ps-1"></div>
             <div className="flex h-10 w-[568px] flex-row gap-10 ">
               <div className="flex h-10 w-48 justify-center ">
                 <div className="-ml-16 flex h-auto w-auto items-center ">
@@ -79,20 +79,16 @@ const ListComponent1: React.FC = () => {
                   id="engageId"
                   className="flex h-10 w-24 items-center gap-2"
                 >
-                  <img
-                    src={EngageIcon}
-                    alt="Engage Icon"
-                    className=" h-6 w-6"
-                  />
+                  <img src={SplitIcon} alt="Split Icon" className=" h-6 w-6" />
                   <p className="mt-3 h-8 w-16 font-source-sans-pro font-normal leading-5 text-gray-400 ">
-                    Engage
+                    Split
                   </p>
                 </div>
                 <div className="ml-6 flex h-[40px] w-[200px] flex-row items-center justify-end gap-10">
                   <div className="flex h-10 w-16 flex-row items-center gap-2">
-                    <div className="h-1 w-4 rounded-lg bg-scaling-green"></div>
                     <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
-                    <div className="h-1 w-4 rounded-lg bg-scaling-red"></div>
+                    <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
+                    <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
                   </div>
                   <p className="flex h-10 w-24 items-center font-source-sans-pro text-[16px] font-normal leading-5 text-gray-400">
                     8 hours ago
@@ -125,4 +121,4 @@ const ListComponent1: React.FC = () => {
   );
 };
 
-export default ListComponent1;
+export default ListComponent5;
