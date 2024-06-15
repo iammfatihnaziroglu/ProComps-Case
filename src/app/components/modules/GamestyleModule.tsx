@@ -1,11 +1,17 @@
-import React, { useState } from "react";
-import ArrowIcon from "../../../utilities/icons/png/arrow_up.png"; // Tek bir icon kullanacağız, sadece döndürme işlemi yapacağız.
+import React, { useState, useEffect } from "react";
+import ArrowIcon from "../../../utilities/icons/png/arrow_up.png";
 
-const Gamestyles: React.FC = () => {
+interface GameStylesProps {
+  onClick: (clickCount: number) => void;
+}
+
+const GameStyles: React.FC<GameStylesProps> = ({ onClick }) => {
   const [clickCount, setClickCount] = useState(0);
 
   const handleClick = () => {
-    setClickCount((prevCount) => (prevCount + 1) % 3);
+    const newClickCount = (clickCount + 1) % 3;
+    setClickCount(newClickCount);
+    onClick(newClickCount); // Yeni clickCount değerini CompsPage'e iletin
   };
 
   const getNameStyle = () => {
@@ -14,9 +20,9 @@ const Gamestyles: React.FC = () => {
   };
 
   const getIconRotation = () => {
-    if (clickCount === 1) return "rotate-0"; // İlk tıklama
-    if (clickCount === 2) return "rotate-180"; // İkinci tıklama
-    return ""; // Varsayılan durum (ilk hali)
+    if (clickCount === 1) return "rotate-0";
+    if (clickCount === 2) return "rotate-180";
+    return "";
   };
 
   return (
@@ -24,11 +30,11 @@ const Gamestyles: React.FC = () => {
       className="flex h-32 w-[101px] cursor-pointer flex-col items-center justify-center rounded-lg"
       onClick={handleClick}
     >
-      <div className="-ml-10  flex h-4 w-[61px] items-center transition duration-300 ease-in-out">
+      <div className="-ml-10 flex h-4 w-[61px] items-center transition duration-300 ease-in-out">
         <p
           className={`h-4 w-[33px] font-source-sans-pro text-[13px] font-normal leading-4 ${getNameStyle()}`}
         >
-          Gamestyles
+          Gamestyle
         </p>
         {clickCount > 0 && (
           <img
@@ -42,4 +48,4 @@ const Gamestyles: React.FC = () => {
   );
 };
 
-export default Gamestyles;
+export default GameStyles;
