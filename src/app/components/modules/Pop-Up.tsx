@@ -5,6 +5,7 @@ import BriarAvatar from "../../../utilities/champions/Briar.png";
 import AhriAvatar from "../../../utilities/champions/Ahri.png";
 import AsheAvatar from "../../../utilities/champions/Ashe.png";
 import BrandAvatar from "../../../utilities/champions/Brand.png";
+import ProtectIcon from "../../../utilities/icons/png/protect.png";
 
 interface PopUpProps {
   name: string;
@@ -15,6 +16,9 @@ interface PopUpProps {
 }
 
 const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
+  // Truncate the name if it's longer than 30 characters
+  const truncatedName = name.length > 17 ? `${name.substring(0, 14)}...` : name;
+
   return (
     <div className="ml-[295px] mt-[65px] flex h-[262px] w-[400px] items-center justify-center">
       <div className="relative h-full w-full rounded-[16px] bg-black">
@@ -28,12 +32,14 @@ const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
             className=" h-[10px] w-[10px]"
           />
         </div>
-        <p className="ml-[100px] mt-6 flex h-10 w-[200px] flex-nowrap justify-center font-unbounded text-[16px] font-normal leading-5 text-compName-white">
-          {name}
-        </p>
-        <p className="-mt-4 ml-[100px] flex h-10 w-[200px] flex-nowrap justify-center text-center font-source-sans-pro text-[16px] font-normal leading-5 text-compName-white">
-          8 hours ago
-        </p>
+        <div className="flex flex-col">
+          <p className="ml-[100px] mt-6 flex h-10 w-[200px] flex-row flex-nowrap justify-center font-unbounded text-[16px] font-normal leading-5 text-compName-white">
+            {truncatedName}
+          </p>
+          <p className="-mt-4 ml-[100px] flex h-10 w-[200px] flex-nowrap justify-center text-center font-source-sans-pro text-[16px] font-normal leading-5 text-compName-white">
+            8 hours ago
+          </p>
+        </div>
         <div className="ml-9 flex h-10 w-48 justify-center ">
           <div className="ml-8 flex h-auto w-auto items-center ">
             <img
@@ -64,7 +70,17 @@ const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
           </div>
         </div>
         <div className="ml-[108px] mt-8 flex h-10 w-[184px] flex-row items-center justify-center gap-6 ">
-          <div className="bg-red text-white">{gamestyle.name}</div>
+          <div className="flex h-10 w-[96px] flex-row items-center justify-center gap-2">
+            <img src={ProtectIcon} alt="Protect Icon" className="h-6 w-6 " />
+            <p className="flex h-8 w-[64px] items-center font-source-sans-pro text-[16px] font-normal leading-5 text-gray-400">
+              {gamestyle.name}
+            </p>
+          </div>
+          <div className=" flex h-10 w-16 flex-row items-center gap-2">
+            <div className="h-1 w-4 rounded-lg bg-scaling-green"></div>
+            <div className="h-1 w-4 rounded-lg bg-scaling-orange"></div>
+            <div className="h-1 w-4 rounded-lg bg-scaling-red"></div>
+          </div>{" "}
         </div>
       </div>
     </div>
