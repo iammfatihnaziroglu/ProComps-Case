@@ -1,11 +1,17 @@
-import React, { useState } from "react";
-import ArrowIcon from "../../../utilities/icons/png/arrow_up.png"; // Tek bir icon kullanacağız, sadece döndürme işlemi yapacağız.
+import React, { useState, useEffect } from "react";
+import ArrowIcon from "../../../utilities/icons/png/arrow_up.png";
 
-const NameModule: React.FC = () => {
+interface NameModuleProps {
+  onClick: (clickCount: number) => void;
+}
+
+const NameModule: React.FC<NameModuleProps> = ({ onClick }) => {
   const [clickCount, setClickCount] = useState(0);
 
   const handleClick = () => {
-    setClickCount((prevCount) => (prevCount + 1) % 3);
+    const newClickCount = (clickCount + 1) % 3;
+    setClickCount(newClickCount);
+    onClick(newClickCount); // Yeni clickCount değerini CompsPage'e iletin
   };
 
   const getNameStyle = () => {
@@ -14,9 +20,9 @@ const NameModule: React.FC = () => {
   };
 
   const getIconRotation = () => {
-    if (clickCount === 1) return "rotate-0"; // İlk tıklama
-    if (clickCount === 2) return "rotate-180"; // İkinci tıklama
-    return ""; // Varsayılan durum (ilk hali)
+    if (clickCount === 1) return "rotate-0";
+    if (clickCount === 2) return "rotate-180";
+    return "";
   };
 
   return (
