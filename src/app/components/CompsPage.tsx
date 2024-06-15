@@ -170,7 +170,7 @@ const CompsPage: React.FC = () => {
   };
 
   return (
-    <div className="md:min-w-screen flex h-[670px] w-[1096px] flex-col items-center justify-center ">
+    <div className="flex h-[670px] w-[1096px] flex-col items-center justify-center ">
       <div className="flex h-[632px] w-[1056px]">
         <div className="flex h-[632px] w-[1056px] rounded-[24px] bg-compName-gray">
           <div className="absolute -mt-10 ml-[42px] h-4 w-[61px] transition duration-300 ease-in-out">

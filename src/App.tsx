@@ -4,10 +4,10 @@ import Homepage from "./app/home/Homepage";
 function App() {
   return (
     <main className="max-w-1xl max-h-1xl flex min-h-screen w-full flex-col bg-black">
-      <div className="fixed">
+      <div>
         <Navbar />
       </div>
-      <div className="min-w-screen flex min-h-screen items-center justify-center overflow-y-auto">
+      <div className="flex items-center justify-center overflow-y-auto">
         <Homepage />
       </div>
     </main>
