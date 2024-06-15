@@ -37,7 +37,7 @@ const CompsPage: React.FC = () => {
     <div className="md:min-w-screen flex h-[670px] w-[1096px] items-center justify-center ">
       <div className="flex h-[632px] w-[1056px]">
         <div className="flex h-[632px] w-[1056px] rounded-[24px] bg-compName-gray">
-          <div className="fixed -mt-10 ml-[42px] h-4 w-[61px] transition duration-300 ease-in-out">
+          <div className="absolute -mt-10 ml-[42px] h-4 w-[61px] transition duration-300 ease-in-out">
             <NameComponent />
             {/* <div className="h-4 w-[51px] gap-2">
               <p className="h-4 w-[33px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
@@ -45,28 +45,28 @@ const CompsPage: React.FC = () => {
               </p>
             </div> */}
           </div>
-          <div className="fixed ml-[320px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
+          <div className="absolute ml-[320px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
             <div className="h-4 w-[80px] gap-2">
               <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
                 Champions
               </p>
             </div>
           </div>
-          <div className="fixed ml-[552px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
+          <div className="absolute ml-[552px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
             <div className="h-4 w-[80px] gap-2">
               <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
                 Gamestyle
               </p>
             </div>
           </div>
-          <div className="fixed ml-[672px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
+          <div className="absolute ml-[672px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
             <div className="h-4 w-[80px] gap-2">
               <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
                 Scaling
               </p>
             </div>
           </div>
-          <div className="fixed ml-[776px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
+          <div className="absolute ml-[776px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
             <div className="h-4 w-[80px] gap-2">
               <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
                 Added
