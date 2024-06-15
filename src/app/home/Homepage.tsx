@@ -51,7 +51,10 @@ function Homepage() {
                 className={getButtonClass("pick")}
                 onClick={() => handleButtonClick("pick")}
               >
-                <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
+                <div
+                  id="Pick"
+                  className="-ml-[1px] flex h-6 w-6 items-center justify-center"
+                >
                   <img
                     src={PickIcon}
                     alt="Pick Procomps Icon"
@@ -63,7 +66,10 @@ function Homepage() {
                 className={getButtonClass("siege")}
                 onClick={() => handleButtonClick("siege")}
               >
-                <div className="ml-[1px] flex h-6 w-6 items-center justify-center">
+                <div
+                  id="Siege"
+                  className="ml-[1px] flex h-6 w-6 items-center justify-center"
+                >
                   <img
                     src={SiegeIcon}
                     alt="Siege Procomps Icon"
@@ -75,7 +81,10 @@ function Homepage() {
                 className={getButtonClass("engage")}
                 onClick={() => handleButtonClick("engage")}
               >
-                <div className="flex h-6 w-6 items-center justify-center">
+                <div
+                  id="Engage"
+                  className="flex h-6 w-6 items-center justify-center"
+                >
                   <img
                     src={EngageIcon}
                     alt="Engage Procomps Icon"
@@ -87,7 +96,10 @@ function Homepage() {
                 className={getButtonClass("protect")}
                 onClick={() => handleButtonClick("protect")}
               >
-                <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
+                <div
+                  id="Protect"
+                  className="-ml-[1px] flex h-6 w-6 items-center justify-center"
+                >
                   <img
                     src={ProtectIcon}
                     alt="Protect Procomps Icon"
@@ -99,7 +111,10 @@ function Homepage() {
                 className={getButtonClass("split")}
                 onClick={() => handleButtonClick("split")}
               >
-                <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
+                <div
+                  id="Split"
+                  className="-ml-[1px] flex h-6 w-6 items-center justify-center"
+                >
                   <img
                     src={SplitIcon}
                     alt="Split Procomps Icon"

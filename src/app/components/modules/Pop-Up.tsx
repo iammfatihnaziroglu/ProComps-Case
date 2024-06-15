@@ -10,7 +10,6 @@ interface PopUpProps {
   name: string;
   gamestyle: {
     name: string;
-    icon: string;
   };
   onClose: () => void;
 }
@@ -65,7 +64,7 @@ const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
           </div>
         </div>
         <div className="ml-[108px] mt-8 flex h-10 w-[184px] flex-row items-center justify-center gap-6 ">
-          <div className="bg-red text-white">{gamestyle.icon}</div>
+          <div className="bg-red text-white">{gamestyle.name}</div>
         </div>
       </div>
     </div>
