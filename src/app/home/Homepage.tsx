@@ -8,8 +8,8 @@ import ProtectIcon from "../../utilities/icons/png/protect-procomps.png";
 
 function Homepage() {
   return (
-    <main className="min-w-screen flex min-h-screen items-center justify-center ">
-      <div className="flex h-[846px] w-[1136px] flex-col items-center justify-center rounded-[20px]">
+    <main className="min-w-screen over flex min-h-screen items-center justify-center md:p-8 ">
+      <div className="flex h-[846px] w-[1136px] flex-col items-center justify-center rounded-[20px] md:p-8">
         <div className="flex h-[776px] w-[1056px] flex-col items-center justify-center gap-8">
           <div className="flex h-[30px] w-[267px] flex-row items-center justify-center gap-2 ">
             <img src={SolarTshirt} alt="Solar Tshirt" className="h-6 w-6" />

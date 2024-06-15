@@ -3,9 +3,9 @@ import Homepage from "./app/home/Homepage";
 
 function App() {
   return (
-    <main className="max-w-1xl max-h-1xl fixed h-full w-full bg-black">
+    <main className="flex min-h-screen w-full flex-col bg-black">
       <Navbar />
-      <div className="items-center justify-center">
+      <div className="flex flex-grow items-center justify-center overflow-y-auto">
         <Homepage />
       </div>
     </main>
