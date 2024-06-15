@@ -8,6 +8,7 @@ import ListComponent6 from "./base-components/ListComponents/ListComponent6";
 import NameComponent from "./modules/NameModule";
 import Gamestyles from "./modules/GamestyleModule";
 import AddedStyle from "./modules/Added";
+import PopUp from "./modules/Pop-Up";
 
 interface ComponentInfo {
   id: number;
@@ -92,9 +93,23 @@ const CompsPage: React.FC = () => {
     },
   ]);
 
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedName, setSelectedName] = useState("");
+  const [selectedGamestyle, setSelectedGamestyle] = useState("");
+
   const handleDelete = (id: number) => {
     const updatedComponents = components.filter((comp) => comp.id !== id);
     setComponents(updatedComponents);
+  };
+
+  const handleComponentClick = (name: string, gamestyle: string) => {
+    setSelectedName(name);
+    setSelectedGamestyle(gamestyle);
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
   };
 
   const handleNameSortClick = (clickCount: number) => {
@@ -163,7 +178,14 @@ const CompsPage: React.FC = () => {
               <div className="flex h-full overflow-y-auto">
                 <div className="flex h-[944px] w-[976px] flex-col gap-4">
                   {components.map((comp) => (
-                    <div key={comp.id}>{comp.component}</div>
+                    <div
+                      key={comp.id}
+                      onClick={() =>
+                        handleComponentClick(comp.name, comp.gamestyle)
+                      }
+                    >
+                      {comp.component}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -171,6 +193,13 @@ const CompsPage: React.FC = () => {
           </div>
         </div>
       </div>
+      {showPopup && (
+        <PopUp
+          name={selectedName}
+          gamestyle={selectedGamestyle}
+          onClose={handleClosePopup}
+        />
+      )}
     </div>
   );
 };
