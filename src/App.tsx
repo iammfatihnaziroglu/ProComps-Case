@@ -3,7 +3,7 @@ import Homepage from "./app/home/Homepage";
 
 function App() {
   return (
-    <main className="max-w-1xl max-h-1xl  flex min-h-screen w-full flex-col bg-black">
+    <main className="max-w-1xl max-h-1xl flex min-h-screen w-full flex-col bg-black">
       <div className="fixed">
         <Navbar />
       </div>

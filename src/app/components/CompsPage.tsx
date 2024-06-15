@@ -6,6 +6,8 @@ import ListComponent4 from "./base-components/ListComponents/ListComponent4";
 import ListComponent5 from "./base-components/ListComponents/ListComponent5";
 import ListComponent6 from "./base-components/ListComponents/ListComponent6";
 import NameComponent from "./modules/NameModule";
+import Gamestyles from "./modules/GamestyleModule";
+import AddedStyle from "./modules/Added";
 
 interface ComponentInfo {
   id: number;
@@ -52,12 +54,8 @@ const CompsPage: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="absolute ml-[552px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
-            <div className="h-4 w-[80px] gap-2">
-              <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
-                Gamestyle
-              </p>
-            </div>
+          <div className="absolute -mt-10 ml-[552px] h-4 w-[61px]  transition duration-300 ease-in-out">
+            <Gamestyles />
           </div>
           <div className="absolute ml-[672px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
             <div className="h-4 w-[80px] gap-2">
@@ -66,12 +64,8 @@ const CompsPage: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="absolute ml-[776px] mt-4 h-4 w-[61px]  transition duration-300 ease-in-out">
-            <div className="h-4 w-[80px] gap-2">
-              <p className="h-4 w-[62px] font-source-sans-pro text-[13px] font-normal leading-4 text-gray-400">
-                Added
-              </p>
-            </div>
+          <div className="absolute -mt-10 ml-[776px] h-4 w-[61px]  transition duration-300 ease-in-out">
+            <AddedStyle />
           </div>
           <div className="ml-8 mt-12 flex h-[552px] max-h-[552px] w-[1008px] flex-col items-start">
             <div className="flex h-[552px] w-[1008px] flex-col gap-8 ">
