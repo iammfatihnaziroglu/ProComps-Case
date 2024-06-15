@@ -3,7 +3,7 @@ import SolarTshirt from "../../utilities/icons/png/solar_t-shirt-bold.png";
 import PickIcon from "../../utilities/icons/png/pick-procomps.png";
 import SplitIcon from "../../utilities/icons/png/split-procomps.png";
 import SiegeIcon from "../../utilities/icons/png/siege-procomps.png";
-import EngageIcon from "../../utilities/icons/png/engage-procomps.png";
+import EngageIcon from "../../utilities/icons/png/engage-procomps2.png";
 import ProtectIcon from "../../utilities/icons/png/protect-procomps.png";
 
 function Homepage() {
@@ -25,7 +25,7 @@ function Homepage() {
               Filter by Gamestyles:
             </p>
             <div className="flex h-10 w-[264px] flex-row items-center justify-start gap-4">
-              <div className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full bg-compName-gray">
+              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={PickIcon}
@@ -33,8 +33,8 @@ function Homepage() {
                     className="h-[16.3px] w-6 "
                   />
                 </div>
-              </div>
-              <div className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full bg-compName-gray">
+              </button>
+              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
                 <div className="ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={SiegeIcon}
@@ -42,8 +42,8 @@ function Homepage() {
                     className="h-[18px] w-[21px] "
                   />
                 </div>
-              </div>
-              <div className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full bg-compName-gray">
+              </button>
+              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
                 <div className="flex h-6 w-6 items-center justify-center">
                   <img
                     src={EngageIcon}
@@ -51,8 +51,8 @@ function Homepage() {
                     className="h-[21px] w-[17.5px] "
                   />
                 </div>
-              </div>
-              <div className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full bg-compName-gray">
+              </button>
+              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={ProtectIcon}
@@ -60,8 +60,8 @@ function Homepage() {
                     className="h-6 w-6 "
                   />
                 </div>
-              </div>
-              <div className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full bg-compName-gray">
+              </button>
+              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={SplitIcon}
@@ -69,7 +69,7 @@ function Homepage() {
                     className="h-[19.26px] w-[21.26px] "
                   />
                 </div>
-              </div>
+              </button>
             </div>
           </div>
           <CompsPage />

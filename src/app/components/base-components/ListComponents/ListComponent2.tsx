@@ -8,14 +8,17 @@ import EngageIcon from "../../../../utilities/icons/png/engage.png";
 import BuilderIcon from "../../../../utilities/icons/png/builder-icon.png";
 import BuilderWhiteIcon from "../../../../utilities/icons/png/builder-icon_white.png";
 
-const ListComponent2: React.FC = () => {
+interface ListComponentProps {
+  onDelete: () => void;
+}
+const ListComponent2: React.FC<ListComponentProps> = ({ onDelete }) => {
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
   const [isBuilderHovered, setIsBuilderHovered] = useState(false);
 
   return (
     <div className="md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] bg-compName-gray hover:bg-delete-gray">
       <div
-        id="delete"
+        onClick={onDelete}
         className="relative mb-20 hidden group-hover:block"
         onMouseEnter={() => setIsDeleteHovered(true)}
         onMouseLeave={() => setIsDeleteHovered(false)}
