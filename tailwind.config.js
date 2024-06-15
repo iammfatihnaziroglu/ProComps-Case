@@ -35,6 +35,7 @@ module.exports = {
           500: "#1C1C1C",
         },
         procomps: "#06D6BE",
+        procomps_dark: "#07C5AF",
         scroll: "#292929",
         builder: "#5E5E5E",
         compName: {

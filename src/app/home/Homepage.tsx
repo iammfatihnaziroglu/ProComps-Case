@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import CompsPage from "../components/CompsPage";
 import SolarTshirt from "../../utilities/icons/png/solar_t-shirt-bold.png";
 import PickIcon from "../../utilities/icons/png/pick-procomps.png";
@@ -7,6 +8,27 @@ import EngageIcon from "../../utilities/icons/png/engage-procomps2.png";
 import ProtectIcon from "../../utilities/icons/png/protect-procomps.png";
 
 function Homepage() {
+  const [activeButton, setActiveButton] = useState<string | null>(null);
+
+  const handleButtonClick = (buttonId: string) => {
+    setActiveButton((prevActiveButton) =>
+      prevActiveButton === buttonId ? null : buttonId,
+    );
+  };
+
+  const isButtonActive = (buttonId: string) => {
+    return activeButton === buttonId;
+  };
+
+  const getButtonClass = (buttonId: string) => {
+    const baseClass =
+      "p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray";
+    const activeClass = "bg-procomps_dark bg-opacity-10";
+    const defaultClass = "bg-compName-gray hover:bg-delete-border";
+
+    return `${baseClass} ${isButtonActive(buttonId) ? activeClass : defaultClass}`;
+  };
+
   return (
     <main className="flex items-center justify-center md:m-8 md:p-8 ">
       <div className="max-w-screen flex max-h-screen flex-col items-center justify-center rounded-[20px] md:m-20 md:h-full md:w-48">
@@ -25,7 +47,10 @@ function Homepage() {
               Filter by Gamestyles:
             </p>
             <div className="flex h-10 w-[264px] flex-row items-center justify-start gap-4">
-              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
+              <button
+                className={getButtonClass("pick")}
+                onClick={() => handleButtonClick("pick")}
+              >
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={PickIcon}
@@ -34,7 +59,10 @@ function Homepage() {
                   />
                 </div>
               </button>
-              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
+              <button
+                className={getButtonClass("siege")}
+                onClick={() => handleButtonClick("siege")}
+              >
                 <div className="ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={SiegeIcon}
@@ -43,16 +71,22 @@ function Homepage() {
                   />
                 </div>
               </button>
-              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
+              <button
+                className={getButtonClass("engage")}
+                onClick={() => handleButtonClick("engage")}
+              >
                 <div className="flex h-6 w-6 items-center justify-center">
                   <img
                     src={EngageIcon}
                     alt="Engage Procomps Icon"
-                    className="h-[21px] w-[17.5px] "
+                    className="-ml-[1px] h-[21px] w-[19px] "
                   />
                 </div>
               </button>
-              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
+              <button
+                className={getButtonClass("protect")}
+                onClick={() => handleButtonClick("protect")}
+              >
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={ProtectIcon}
@@ -61,7 +95,10 @@ function Homepage() {
                   />
                 </div>
               </button>
-              <button className="p-[0px, 9.7px, 0px, 9.7px] flex h-10 w-10 items-center justify-center rounded-full border border-compName-gray bg-compName-gray hover:bg-delete-border active:border-procomps">
+              <button
+                className={getButtonClass("split")}
+                onClick={() => handleButtonClick("split")}
+              >
                 <div className="-ml-[1px] flex h-6 w-6 items-center justify-center">
                   <img
                     src={SplitIcon}
