@@ -8,12 +8,12 @@ import EngageIcon from "../../../utilities/icons/png/engage.png";
 import BuilderIcon from "../../../utilities/icons/png/builder-icon.png";
 import BuilderWhiteIcon from "../../../utilities/icons/png/builder-icon_white.png";
 
-const ListComponent: React.FC = () => {
+const ListComponent1: React.FC = () => {
   const [isDeleteHovered, setIsDeleteHovered] = useState(false);
   const [isBuilderHovered, setIsBuilderHovered] = useState(false);
 
   return (
-    <div className="bg-compName-gray md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] hover:bg-delete-gray">
+    <div className="md:min-w-screen group flex h-20 w-[976px] items-center rounded-[200px] bg-compName-gray hover:bg-delete-gray">
       <div
         id="delete"
         className="relative mb-20 hidden group-hover:block"
@@ -40,41 +40,41 @@ const ListComponent: React.FC = () => {
       <div className="flex h-20 w-[976px] items-center justify-center rounded-[200px] border border-delete-border">
         <div className="flex h-10 w-[896px] flex-row items-center justify-start">
           <div className="flex h-10 w-[816px] flex-row items-center justify-start gap-6">
-            <p className="font-unbounded text-compName-white flex h-10 w-[200px] flex-wrap items-center text-nowrap text-[13px] font-normal leading-4">
-              CompName Example Win
+            <p className="flex h-10 w-[200px] flex-wrap items-center text-nowrap  font-unbounded text-[13px] font-normal leading-4 text-compName-white">
+              Protetct Ashe (Late)
             </p>
-            <div className="w-10 rotate-90 border border-delete-border"></div>
+            <div className="flex w-10 rotate-90 border border-delete-border"></div>
             <div className="flex h-10 w-[568px] flex-row gap-10 ">
               <div className="flex h-10 w-48 justify-center ">
-                <div className="flex h-auto w-auto items-center ">
+                <div className="-ml-16 flex h-auto w-auto items-center ">
                   <img
                     src={AkaliAvatar}
                     alt="Akali Avatar"
-                    className="border-compName-gray h-10 w-10 rounded-[75px] border-[2.4px]"
+                    className="h-10 w-10 rounded-[75px] border-[2.4px] border-compName-gray"
                   />
                   <img
                     src={BriarAvatar}
                     alt="Briar Avatar"
-                    className="border-compName-gray -ml-[5px]  h-10 w-10 rounded-[75px] border-[2.4px]"
+                    className="-ml-[5px] h-10  w-10 rounded-[75px] border-[2.4px] border-compName-gray"
                   />
                   <img
                     src={AhriAvatar}
                     alt="Ahri Avatar"
-                    className="border-compName-gray -ml-[5px] h-10 w-10 rounded-[48.12px] border-[3px]"
+                    className="-ml-[5px] h-10 w-10 rounded-[48.12px] border-[3px] border-compName-gray"
                   />
                   <img
                     src={AsheAvatar}
                     alt="Ashe Avatar"
-                    className="border-compName-gray -ml-[5px]  h-10 w-10 rounded-[75px] border-[2.4px]"
+                    className="-ml-[5px] h-10  w-10 rounded-[75px] border-[2.4px] border-compName-gray"
                   />
                   <img
                     src={BrandAvatar}
                     alt="Brand Avatar"
-                    className="border-compName-gray -ml-[5px] h-10 w-10 rounded-[68.5px] border-[2.4px]"
+                    className="-ml-[5px] h-10 w-10 rounded-[68.5px] border-[2.4px] border-compName-gray"
                   />
                 </div>
               </div>
-              <div className="flex h-10 w-[320px] flex-row items-center justify-start gap-6  ">
+              <div className="-pl-10 -ml-7 flex h-10 w-[320px] flex-row items-center justify-start gap-6  ">
                 <div
                   id="engageId"
                   className="flex h-10 w-24 items-center gap-2"
@@ -125,4 +125,4 @@ const ListComponent: React.FC = () => {
   );
 };
 
-export default ListComponent;
+export default ListComponent1;
