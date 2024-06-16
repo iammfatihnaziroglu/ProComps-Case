@@ -11,6 +11,7 @@ interface PopUpProps {
   name: string;
   gamestyle: {
     name: string;
+    icon: string;
   };
   onClose: () => void;
 }
@@ -71,7 +72,11 @@ const PopUp: React.FC<PopUpProps> = ({ name, gamestyle, onClose }) => {
         </div>
         <div className="ml-[108px] mt-8 flex h-10 w-[184px] flex-row items-center justify-center gap-6 ">
           <div className="flex h-10 w-[96px] flex-row items-center justify-center gap-2">
-            <img src={ProtectIcon} alt="Protect Icon" className="h-6 w-6 " />
+            <img
+              src={gamestyle.icon}
+              alt={`${gamestyle.name} icon`}
+              className="h-6 w-6"
+            />
             <p className="flex h-8 w-[64px] items-center font-source-sans-pro text-[16px] font-normal leading-5 text-gray-400">
               {gamestyle.name}
             </p>
